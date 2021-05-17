@@ -6,9 +6,11 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
 
-const User = require("../../models/Users");
+const User = require("../../models/User");
 
-// register users
+// route    POST api/users
+// desc     Register user
+// access   Public
 router.post(
   "/",
   [
@@ -57,18 +59,19 @@ router.post(
       await user.save();
 
       // return jsonwebtoken
-      const token = {
+      const tokendata = {
         user: {
           id: user.id,
         },
       };
+
       jwt.sign(
-        token,
-        config.get("jwtToken"),
+        tokendata,
+        config.get("jwtSecret"),
         { expiresIn: 360000 },
-        (err, tokenn) => {
+        (err, token) => {
           if (err) throw err;
-          res.json({ tokenn });
+          res.json({ token });
         }
       );
     } catch (err) {

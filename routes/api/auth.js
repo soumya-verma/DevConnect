@@ -1,12 +1,15 @@
 const express = require("express");
 const auth = require("../../middleware/auth");
-const User = require("../../models/Users");
+const User = require("../../models/User");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
 
+// route    GET api/auth
+// desc     Get user by token
+// access   Private
 router.get("/", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password"); // excluding password
@@ -17,6 +20,9 @@ router.get("/", auth, async (req, res) => {
   }
 });
 
+// route    POST api/auth
+// desc     Authenticate user & get token
+// access   Public
 router.post(
   "/",
   [
@@ -51,14 +57,15 @@ router.post(
       }
 
       // return jsonwebtoken
-      const token = {
+      const tokendata = {
         user: {
           id: user.id,
         },
       };
+
       jwt.sign(
-        token,
-        config.get("jwtToken"),
+        tokendata,
+        config.get("jwtSecret"),
         { expiresIn: 360000 },
         (err, token) => {
           if (err) throw err;
