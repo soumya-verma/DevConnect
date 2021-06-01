@@ -10,7 +10,7 @@ const Dashboard = (props) => {
   useEffect(() => {
     props.getCurrentProfile();
   }, []);
-  //   <Fragment>hello</Fragment>;
+
   return props.profile.loading && props.profile.profile === null ? (
     <Spinner />
   ) : (
