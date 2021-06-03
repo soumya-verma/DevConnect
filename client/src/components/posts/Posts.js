@@ -21,7 +21,7 @@ const Posts = (props) => {
     <Fragment>
       <h1 className="larger text-primary">Posts</h1>
       <p className="lead">
-        <i className="fas fa-user"></i>Welcome to the community
+        <i className="fas fa-user"></i> Welcome to the community
       </p>
       <PostForm />
       <div className="posts">
