@@ -7,12 +7,11 @@ import Spinner from "../layout/Spinner";
 import DashboardActions from "./DashboardActions";
 import Experience from "./Experience";
 import Education from "./Education";
-import profile from "../../reducers/profile";
 
 const Dashboard = (props) => {
   useEffect(() => {
     props.getCurrentProfile();
-  }, []);
+  }, [props.getCurrentProfile]);
 
   return props.profile.loading && props.profile.profile === null ? (
     <Spinner />
