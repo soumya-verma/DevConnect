@@ -1,0 +1,6 @@
+{
+  "mongoURL": "mongodb+srv://root:peanutsomi@cluster0.ps9us.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "107edb1f5a64eb64ff31",
+  "githubSecret": "0691b677758474ac339830eaf87bf505d3d1b4d4"
+}
