@@ -10,12 +10,8 @@ const Education = (props) => {
       <td>{edu.school}</td>
       <td className="hide-sm">{edu.degree}</td>
       <td>
-        <Moment format="YYYY/MM/DD">{edu.from}</Moment> -{" "}
-        {edu.to === null ? (
-          "Now"
-        ) : (
-          <Moment format="YYYY/MM/DD">{edu.to}</Moment>
-        )}
+        <Moment format="MMM/YYYY">{edu.from}</Moment> -{" "}
+        {edu.to === null ? "Now" : <Moment format="MMM/YYYY">{edu.to}</Moment>}
       </td>
       <td>
         <button

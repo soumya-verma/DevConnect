@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Arimo", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -36,12 +36,12 @@ img {
 
 /* Utilities */
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+  margin-top: 6rem; /*6*/
+  margin-bottom: 3rem; /*3*/
 }
 
 /* Text Styles*/
@@ -52,13 +52,13 @@ img {
 }
 
 .large {
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -137,6 +137,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 .badge {
@@ -256,6 +257,7 @@ img {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  font-family: "Arimo", sans-serif;
 }
 
 .form input[type="submit"],
@@ -310,6 +312,7 @@ button {
   top: 0;
   border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar ul {

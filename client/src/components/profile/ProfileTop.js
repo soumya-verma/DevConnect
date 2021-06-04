@@ -14,7 +14,7 @@ const ProfileTop = (props) => {
   } = props;
 
   return (
-    <div class="profile-top bg-primary p-2">
+    <div class="profile-top bg-primary p-1">
       <img class="round-img my-1" src={avatar} alt="" />
       <h1 class="large">{name}</h1>
       <p class="lead">
@@ -47,6 +47,7 @@ const ProfileTop = (props) => {
             <i class="fab fa-youtube fa-2x"></i>
           </a>
         )}
+        {console.log(social)}
         {social && social.instagram && (
           <a href={social.instagram} target="_blank" rel="noopener noreferrer">
             <i class="fab fa-instagram fa-2x"></i>

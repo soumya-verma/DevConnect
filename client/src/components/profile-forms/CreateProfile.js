@@ -65,7 +65,7 @@ const CreateProfile = (props) => {
             <option value="Student or Learning">Student or Learning</option>
             <option value="Instructor">Instructor or Teacher</option>
             <option value="Intern">Intern</option>
-            <option value="Other">Other</option>
+            <option value="Works">Other</option>
           </select>
           <small className="form-text">
             Give us an idea of where you are at in your career
@@ -103,9 +103,7 @@ const CreateProfile = (props) => {
             value={location}
             onChange={(e) => onChange(e)}
           />
-          <small className="form-text">
-            City & state suggested (eg. Boston, MA)
-          </small>
+          <small className="form-text">City & state suggested</small>
         </div>
         <div className="form-group">
           <input

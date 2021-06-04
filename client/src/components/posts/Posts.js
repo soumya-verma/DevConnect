@@ -19,7 +19,7 @@ const Posts = (props) => {
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className="larger text-primary">Posts</h1>
+      <h1 className="large text-primary">Posts</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Welcome to the community
       </p>

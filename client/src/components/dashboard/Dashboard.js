@@ -27,7 +27,9 @@ const Dashboard = (props) => {
           <DashboardActions />
           <Experience experience={props.profile.profile.experience} />
           <Education education={props.profile.profile.education} />
-
+          <br />
+          <br />
+          <br />
           <div className="my-2">
             <button
               className="btn btn-danger"

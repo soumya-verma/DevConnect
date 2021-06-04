@@ -10,17 +10,19 @@ const ProfileExperience = (props) => {
     <div>
       <h3 className="text-dark">{company}</h3>
       <p>
-        <Moment format="YYYY/MM/DD">{from}</Moment> -{" "}
-        {!to ? "Now" : <Moment format="YYYY/MM/DD">{to}</Moment>}
+        <Moment format="MMM/YYYY">{from}</Moment> -{" "}
+        {!to ? "Now" : <Moment format="MMM/YYYY">{to}</Moment>}
       </p>
       <p>
         <strong>Position: </strong>
         {title}
       </p>
-      <p>
-        <strong>Description: </strong>
-        {description}
-      </p>
+      {description && (
+        <p>
+          <strong>Description: </strong>
+          {description}
+        </p>
+      )}
     </div>
   );
 };

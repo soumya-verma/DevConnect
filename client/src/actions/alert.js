@@ -12,6 +12,12 @@ export const setAlert =
       data: { msg, alertType, id },
     });
 
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+
     setTimeout(
       () =>
         dispatch({
