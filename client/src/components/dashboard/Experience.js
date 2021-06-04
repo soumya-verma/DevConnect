@@ -11,7 +11,7 @@ const Experience = (props) => {
       <td className="hide-sm">{exp.title}</td>
       <td>
         <Moment format="MMM/YYYY">{exp.from}</Moment> -{" "}
-        {exp.to === null ? "Now" : <Moment format="MMM/YYYY">{exp.to}</Moment>}
+        {exp.current ? "Now" : <Moment format="MMM/YYYY">{exp.to}</Moment>}
       </td>
       <td>
         <button

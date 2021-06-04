@@ -11,7 +11,7 @@ const Education = (props) => {
       <td className="hide-sm">{edu.degree}</td>
       <td>
         <Moment format="MMM/YYYY">{edu.from}</Moment> -{" "}
-        {edu.to === null ? "Now" : <Moment format="MMM/YYYY">{edu.to}</Moment>}
+        {edu.current ? "Now" : <Moment format="MMM/YYYY">{edu.to}</Moment>}
       </td>
       <td>
         <button
