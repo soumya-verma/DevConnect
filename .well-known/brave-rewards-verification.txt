@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: infinite-falls-17384.herokuapp.com
+Token: 342726c75832863e01e87e440891e2715eafdb517e13decabd0fb96f7f0a26ae
